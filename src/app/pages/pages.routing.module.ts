@@ -5,17 +5,13 @@ import { AppSecondComponent } from './second/second.component';
 export const PagesRoutes: Routes = [
 
   {
-    path: '',
+    path: 'dashboard',
     component: AppDashboardComponent,
-    data: {
-      title: 'Starter Page',
-    },
+
   },
   {
-    path: '',
+    path: 'second',
     component: AppSecondComponent,
-    data: {
-      title: 'Second Page',
-    },
+
   },
 ];
