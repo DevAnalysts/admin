@@ -14,16 +14,14 @@ const MONITOR_VIEW = 'screen and (min-width: 1024px)';
 })
 export class FullComponent implements OnInit {
   constructor() {
-    console.log('Constructor');
+    console.log('Constructor full component');
   }
 
-
-
   ngOnInit(): void {
-    console.log('ngOnInit');
+    console.log('ngOnInit full component');
   }
 
   ngAfterViewInit(): void {
-    console.log('After View Init');
+    console.log('After View Init full component');
   }
 }
