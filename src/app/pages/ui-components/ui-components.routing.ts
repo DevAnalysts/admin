@@ -12,6 +12,11 @@ export const UiComponentsRoutes: Routes = [
     path: '',
     children: [
       {
+        path: '',
+        redirectTo: '/ui-components/badge',
+        pathMatch: 'full',
+      },
+      {
         path: 'badge',
         component: AppBadgeComponent,
       },

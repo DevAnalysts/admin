@@ -24,7 +24,7 @@ import { HeaderComponent } from './layouts/header/header.component';
 
 import { BrandingComponent } from './layouts/sidebar/branding.component';
 import { AppNavItemComponent } from './layouts/sidebar/nav-item/nav-item.component';
-// import { AppDashboardComponent } from './pages/dashboard/dashboard.component';
+ import { AppDashboardComponent } from './pages/dashboard/dashboard.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +33,7 @@ import { AppNavItemComponent } from './layouts/sidebar/nav-item/nav-item.compone
     BlankComponent,
     SidebarComponent,
     HeaderComponent,
-    // AppDashboardComponent,
+     AppDashboardComponent,
     BrandingComponent,
     AppNavItemComponent,
   ],
