@@ -9,10 +9,11 @@ import { NgApexchartsModule } from 'ng-apexcharts';
 import { TablerIconsModule } from 'angular-tabler-icons';
 import * as TablerIcons from 'angular-tabler-icons/icons';
 import { AppDashboardComponent } from './dashboard/dashboard.component';
+import { AppSecondComponent } from './second/second.component';
 
 
 @NgModule({
-  declarations: [AppDashboardComponent],
+  declarations: [AppDashboardComponent,AppSecondComponent],
   imports: [
     CommonModule,
     MaterialModule,

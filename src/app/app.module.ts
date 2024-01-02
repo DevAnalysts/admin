@@ -33,7 +33,7 @@ import { AppNavItemComponent } from './layouts/sidebar/nav-item/nav-item.compone
     BlankComponent,
     SidebarComponent,
     HeaderComponent,
-     AppDashboardComponent,
+    //  AppDashboardComponent,
     BrandingComponent,
     AppNavItemComponent,
   ],

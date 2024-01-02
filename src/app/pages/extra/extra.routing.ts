@@ -11,7 +11,7 @@ export const ExtraRoutes: Routes = [
     children: [
     {
       path: '',
-      redirectTo: '/extra/icons',
+      redirectTo: '/extra',
       pathMatch: 'full',
     },
       {

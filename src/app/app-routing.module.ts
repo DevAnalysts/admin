@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { BlankComponent } from './layouts/blank/blank.component';
 import { FullComponent } from './layouts/full.component';
 import { AppDashboardComponent } from './pages/dashboard/dashboard.component';
+import { AppSecondComponent } from './pages/second/second.component';
 
 const routes: Routes = [
   {
@@ -10,18 +11,18 @@ const routes: Routes = [
     component: FullComponent,
     children: [
       {
-        path: '',
-        redirectTo: '/dashboard',
-        pathMatch: 'full',
-      },
-      
-      {
         path: 'dashboard',
         component: AppDashboardComponent,
-        data: {
-          title: 'Dashboard',
-        },
+
       },
+
+      {
+        path: 'second',
+        component: AppSecondComponent,
+
+      },
+
+
       {
         path: 'ui-components',
         loadChildren: () =>

@@ -13,7 +13,7 @@ export const UiComponentsRoutes: Routes = [
     children: [
       {
         path: '',
-        redirectTo: '/ui-components/badge',
+        redirectTo: '/ui-components',
         pathMatch: 'full',
       },
       {
