@@ -9,6 +9,11 @@ export const ExtraRoutes: Routes = [
   {
     path: '',
     children: [
+    {
+      path: '',
+      redirectTo: '/extra/icons',
+      pathMatch: 'full',
+    },
       {
         path: 'icons',
         component: AppIconsComponent,

@@ -4052,6 +4052,12 @@ textarea.form-control {
   font-size: 0.65625rem;
   background-color: #e9ecef;
   border-radius: 0.75rem; }
+  .content-wrapper{
+    flex-grow: 1;
+  padding-left: 8rem; 
+  padding-top: 6rem;
+  box-sizing: border-box;
+  }
 
 .progress-bar {
   display: flex;
