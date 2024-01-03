@@ -10,10 +10,11 @@ import { TablerIconsModule } from 'angular-tabler-icons';
 import * as TablerIcons from 'angular-tabler-icons/icons';
 import { AppDashboardComponent } from './dashboard/dashboard.component';
 import { AppSecondComponent } from './second/second.component';
+import { AppOneComponent } from './one/one.component';
 
 
 @NgModule({
-  declarations: [AppDashboardComponent,AppSecondComponent],
+  declarations: [AppDashboardComponent,AppSecondComponent,AppOneComponent],
   imports: [
     CommonModule,
     MaterialModule,

@@ -4,6 +4,7 @@ import { BlankComponent } from './layouts/blank/blank.component';
 import { FullComponent } from './layouts/full.component';
 import { AppDashboardComponent } from './pages/dashboard/dashboard.component';
 import { AppSecondComponent } from './pages/second/second.component';
+import { AppOneComponent } from './pages/one/one.component';
 
 const routes: Routes = [
   {
@@ -13,6 +14,11 @@ const routes: Routes = [
       {
         path: 'dashboard',
         component: AppDashboardComponent,
+
+      },
+      {
+        path: 'one',
+        component: AppOneComponent,
 
       },
 
