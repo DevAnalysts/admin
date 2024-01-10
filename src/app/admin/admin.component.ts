@@ -8,10 +8,7 @@ import {SharedService} from '../shared.service';
 })
 export class AdminComponent implements OnInit {
   title = 'mophy';
-  navSidebarClass: boolean = true;
-  hamburgerClass: boolean = false;
-
-    constructor(public sharedService: SharedService) {
+  constructor(public sharedService: SharedService) {
 
     }
 

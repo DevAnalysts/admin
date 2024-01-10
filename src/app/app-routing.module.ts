@@ -1,22 +1,32 @@
+// app-routing.module.ts
 import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
-import { AdminComponent } from './admin/admin.component';
-import { DashboardComponent } from './dashboard/dashboard.component';
+import { RouterModule, Routes } from '@angular/router';
+import { BlankComponent } from './elements/blank/blank.component';
+
 
 const routes: Routes = [
   { path: '', redirectTo: 'admin/index', pathMatch: 'full' },
+  { path: '', loadChildren: () => import('./admin/admin.module').then(m => m.AdminModule) },
+  { path: 'dashboard', loadChildren: () => import('./dashboard/dashboard.module').then(m => m.DashboardModule) },
+
   {
-    path: 'admin', component: AdminComponent, children: [
-      { path: '', component: DashboardComponent },
-      { path: 'index', component: DashboardComponent },
-      { path: 'index-1', component: DashboardComponent },
-      { path: 'dashboard', component: DashboardComponent },
-    ]
+    path: 'authentication',
+    component: BlankComponent,
+    children: [
+      {
+        path: '',
+        loadChildren: () =>
+          import('./pages/authentication/authentication.module').then(
+            (m) => m.AuthenticationModule
+          ),
+      },
+    ],
   },
+
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

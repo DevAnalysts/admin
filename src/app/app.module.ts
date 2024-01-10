@@ -9,23 +9,17 @@ import { AppComponent } from './app.component';
 import {SharedService} from './shared.service';
 
 /* #########################  SITE PAGES COMPONENT ###################*/
+import { AdminModule } from './admin/admin.module';
+import { DashboardModule } from './dashboard/dashboard.module';
+import { BlankComponent } from './elements/blank/blank.component';
 
-import { AdminComponent } from './admin/admin.component';
-import { HeaderComponent } from './elements/header/header.component';
-import { FooterComponent } from './elements/footer/footer.component';
-import { NavHeaderComponent } from './elements/nav-header/nav-header.component';
-import { NavigationComponent } from './elements/navigation/navigation.component';
-import { DashboardComponent } from './dashboard/dashboard.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    AdminComponent,
-    HeaderComponent,
-    FooterComponent,
-    NavHeaderComponent,
-    NavigationComponent,
-    DashboardComponent,
+    BlankComponent
+
   ],
   imports: [
     BrowserModule,
@@ -34,7 +28,10 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     BrowserAnimationsModule,
     FormsModule,
     ReactiveFormsModule,
+    AdminModule,
+    DashboardModule,
   ],
+
   providers: [
 		SharedService
   ],
