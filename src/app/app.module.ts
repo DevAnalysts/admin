@@ -1,41 +1,37 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { Injectable } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { HttpClientModule } from '@angular/common/http';
 
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import {SharedService} from './shared.service';
 
-// icons
-import { TablerIconsModule } from 'angular-tabler-icons';
-import * as TablerIcons from 'angular-tabler-icons/icons';
+/* #########################  SITE PAGES COMPONENT ###################*/
 
-//Import all material modules
-import { MaterialModule } from './material.module';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { AdminComponent } from './admin/admin.component';
+import { HeaderComponent } from './elements/header/header.component';
+import { FooterComponent } from './elements/footer/footer.component';
 
-//Import Layouts
-import { FullComponent } from './layouts/full.component';
-import { BlankComponent } from './layouts/blank/blank.component';
+import { NavHeaderComponent } from './elements/nav-header/nav-header.component';
+import { NavigationComponent } from './elements/navigation/navigation.component';
 
-// Vertical Layout
-import { SidebarComponent } from './layouts/sidebar/sidebar.component';
-import { HeaderComponent } from './layouts/header/header.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
-import { BrandingComponent } from './layouts/sidebar/branding.component';
-import { AppNavItemComponent } from './layouts/sidebar/nav-item/nav-item.component';
- import { AppDashboardComponent } from './pages/dashboard/dashboard.component';
+
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    FullComponent,
-    BlankComponent,
-    SidebarComponent,
+    AdminComponent,
     HeaderComponent,
-    //  AppDashboardComponent,
-    BrandingComponent,
-    AppNavItemComponent,
+    FooterComponent,
+    NavHeaderComponent,
+    NavigationComponent,
+    DashboardComponent,
   ],
   imports: [
     BrowserModule,
@@ -43,12 +39,12 @@ import { AppNavItemComponent } from './layouts/sidebar/nav-item/nav-item.compone
     HttpClientModule,
     BrowserAnimationsModule,
     FormsModule,
-
     ReactiveFormsModule,
-    MaterialModule,
-    TablerIconsModule.pick(TablerIcons),
+
   ],
-  exports: [TablerIconsModule],
-  bootstrap: [AppComponent],
+  providers: [
+		SharedService
+  ],
+  bootstrap: [AppComponent]
 })
 export class AppModule {}
