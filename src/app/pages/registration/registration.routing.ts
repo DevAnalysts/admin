@@ -1,6 +1,6 @@
 import { Routes } from '@angular/router';
 // ui
-import { AppListingComponent } from './listing/listing.component';
+import { AppListComponent } from './list/list.component';
 import { AppCreateComponent } from './create/create.component';
 
 export const RegistrationRoutes: Routes = [
@@ -13,8 +13,8 @@ export const RegistrationRoutes: Routes = [
         pathMatch: 'full',
       },
       {
-        path: 'listing',
-        component: AppListingComponent,
+        path: 'list',
+        component: AppListComponent,
       },
       {
         path: 'create',
